@@ -1,0 +1,45 @@
+<form [formGroup]="service.form" class="normal-form" (submit)="onSubmit()">
+    <mat-grid-list cols="2" rowHeight="300px">
+    <mat-grid-tile>
+        <div class="controles-container">
+            <input type="hidden" formControlName="id">
+            <mat-form-field>
+                <input formControlName="nomC" matInput placeholder="Nom*">
+                <mat-error>This field is mandatory.</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input formControlName="prenomC" matInput placeholder="Prenom">
+            </mat-form-field>
+            <mat-form-field>
+                <input formControlName="email" matInput placeholder="Email">
+                <mat-error>Invalid email address.</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input formControlName="telC" matInput placeholder="Mobile*">
+                
+            </mat-form-field>
+            
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <div class="controles-container">
+            <mat-form-field>
+                <input formControlName="statutC" matInput placeholder="statut">
+            </mat-form-field>
+            <mat-form-field>
+                <input formControlName="photoC" matInput placeholder="Photo">
+            </mat-form-field>
+            <mat-form-field>
+                <input formControlName="adresseC" matInput placeholder="adresse">
+            </mat-form-field>
+            <mat-form-field>
+                <input formControlName="villeC" matInput placeholder="ville">
+            </mat-form-field>
+            <div class="button-row">
+                <button mat-raisedbutton color="primary" type="submit" [disabled]="service.form.invalid">Submit</button>
+                <button mat-raised-button color="warn" (click)="onClear()">Clear</button>
+            </div>
+        </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+</form>

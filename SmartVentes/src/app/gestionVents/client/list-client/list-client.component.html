@@ -1,0 +1,68 @@
+<mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!-- Position Column -->
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef> Id. </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="nomC">
+      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.nomC}} </mat-cell>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="prenomC">
+      <mat-header-cell *matHeaderCellDef> prenomC </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.prenomC}} </mat-cell>
+    </ng-container>
+  
+     <!-- Weight Column -->
+     <ng-container matColumnDef="statutC">
+        <mat-header-cell *matHeaderCellDef> statut </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.statutC}} </mat-cell>
+      </ng-container>
+    
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="photoC">
+        <mat-header-cell *matHeaderCellDef> Photo </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.photoC}} </mat-cell>
+      </ng-container>
+
+    
+       <!-- Weight Column -->
+       <ng-container matColumnDef="telC">
+          <mat-header-cell *matHeaderCellDef> Tel </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.telC}} </mat-cell>
+        </ng-container>
+      
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="email">
+          <mat-header-cell *matHeaderCellDef>Email </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.email}} </mat-cell>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="adresseC">
+            <mat-header-cell *matHeaderCellDef> adresse </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.adresseC}} </mat-cell>
+          </ng-container>
+          <!-- Symbol Column -->
+        <ng-container matColumnDef="villeC">
+            <mat-header-cell *matHeaderCellDef> ville </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.villeC}} </mat-cell>
+          </ng-container>
+          
+        <!-- Action Column -->
+    <ng-container matColumnDef="actions">
+      <mat-header-cell *matHeaderCellDef> ACTION </mat-header-cell>
+      <mat-cell *matCellDef="let row">
+        <button mat-icon-button (click)="onEdit(row)"><mat-icon>launch</mat-icon></button>
+        <button mat-icon-button (click)="onDelete(row.id)" color="warn">
+          <mat-icon>delete_outline</mat-icon></button>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>

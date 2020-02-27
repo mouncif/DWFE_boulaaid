@@ -1,0 +1,17 @@
+{
+  "Clients": [
+    {
+      "id": 1,
+      "nomC": "test",
+      "prenomC": "SAMIRA",
+      "statutC": "test",
+      "photoC": "url",
+      "telC": "0617018097",
+      "email": "amiraboulaaid@gmail.com",
+      "adresseC": "test2 test1",
+      "villeC": "test"
+    }
+  ],
+  "Fournisseurs": [],
+  "Produits": []
+}

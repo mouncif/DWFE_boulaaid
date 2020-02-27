@@ -1,0 +1,71 @@
+<mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!-- Position Column -->
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef> Id. </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="nomF">
+      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.nomF}} </mat-cell>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="nomCourtF">
+      <mat-header-cell *matHeaderCellDef> nomCourtF </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.nomCourtF}} </mat-cell>
+    </ng-container>
+  
+     <!-- Weight Column -->
+     <ng-container matColumnDef="villeF">
+        <mat-header-cell *matHeaderCellDef> villeF </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.villeF}} </mat-cell>
+      </ng-container>
+    
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="AdresseF">
+        <mat-header-cell *matHeaderCellDef> AdresseF </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.AdresseF}} </mat-cell>
+      </ng-container>
+
+    
+       <!-- Weight Column -->
+       <ng-container matColumnDef="Tel_fixF">
+          <mat-header-cell *matHeaderCellDef> Tel_fixF</mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.Tel_fixF}} </mat-cell>
+        </ng-container>
+      
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="email">
+          <mat-header-cell *matHeaderCellDef>Email </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.email}} </mat-cell>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="Tel_mobileF ">
+            <mat-header-cell *matHeaderCellDef> Tel_mobileF </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.Tel_mobileF }} </mat-cell>
+          </ng-container>
+          <!-- Symbol Column -->
+        <ng-container matColumnDef="FaxF ">
+            <mat-header-cell *matHeaderCellDef> FaxF </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.FaxF }} </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="emailF ">
+            <mat-header-cell *matHeaderCellDef> emailF </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.emailF }} </mat-cell>
+          </ng-container> 
+        <!-- Action Column -->
+    <ng-container matColumnDef="actions">
+      <mat-header-cell *matHeaderCellDef> ACTION </mat-header-cell>
+      <mat-cell *matCellDef="let row">
+        <button mat-icon-button (click)="onEdit(row)"><mat-icon>launch</mat-icon></button>
+        <button mat-icon-button (click)="onDelete(row.id)" color="warn">
+          <mat-icon>delete_outline</mat-icon></button>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
