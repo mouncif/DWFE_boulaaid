@@ -1,1 +1,86 @@
-<p>list-produit works!</p>
+<mat-toolbar style ="background-color:#8B0000;" class="f">
+        <h1 style="color:aliceblue"> Liste des Produits</h1>                  
+        
+    </mat-toolbar>
+<mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!-- Position Column -->
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef> Id. </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="nomP">
+      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.nomP}} </mat-cell>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="nomCourtP">
+      <mat-header-cell *matHeaderCellDef> nomCourtP </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.nomCourtP}} </mat-cell>
+    </ng-container>
+  
+     <!-- Weight Column -->
+     <ng-container matColumnDef="prix_baseP">
+        <mat-header-cell *matHeaderCellDef> prix_baseP</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.prix_baseP}} </mat-cell>
+      </ng-container>
+    
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="photo">
+        <mat-header-cell *matHeaderCellDef> Photo </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.photoC}} </mat-cell>
+      </ng-container>
+
+    
+       <!-- Weight Column -->
+       <ng-container matColumnDef="prix_venteP">
+          <mat-header-cell *matHeaderCellDef> prix_venteP</mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.prix_venteP}} </mat-cell>
+        </ng-container>
+      
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="seuil_max_remiseP">
+          <mat-header-cell *matHeaderCellDef>seuil_max_remiseP </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.seuil_max_remiseP}} </mat-cell>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="adresseC">
+            <mat-header-cell *matHeaderCellDef> adresse </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.adresseC}} </mat-cell>
+          </ng-container>
+          <!-- Symbol Column -->
+        <ng-container matColumnDef="uniteP">
+            <mat-header-cell *matHeaderCellDef> uniteP</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.uniteP}} </mat-cell>
+          </ng-container>
+           <!-- Symbol Column -->
+        <ng-container matColumnDef="imageP">
+            <mat-header-cell *matHeaderCellDef> imageP</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.imageP}} </mat-cell>
+          </ng-container>
+           <!-- Symbol Column -->
+        <ng-container matColumnDef="quantite_initP">
+            <mat-header-cell *matHeaderCellDef> quantite_initP</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.quantite_initP}} </mat-cell>
+          </ng-container>
+           <!-- Symbol Column -->
+        <ng-container matColumnDef="quantite_actP">
+            <mat-header-cell *matHeaderCellDef> quantite_actP</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.quantite_actP}} </mat-cell>
+          </ng-container>
+        <!-- Action Column -->
+    <ng-container matColumnDef="actions">
+      <mat-header-cell *matHeaderCellDef> ACTION </mat-header-cell>
+      <mat-cell *matCellDef="let row">
+        <button mat-icon-button (click)="onEdit(row)"><mat-icon>launch</mat-icon></button>
+        <button mat-icon-button (click)="onDelete(row.id)" color="warn">
+          <mat-icon>delete_outline</mat-icon></button>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
