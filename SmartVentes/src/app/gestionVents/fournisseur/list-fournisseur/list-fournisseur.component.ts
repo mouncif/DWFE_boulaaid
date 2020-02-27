@@ -49,7 +49,7 @@ export class ListFournisseurComponent implements OnInit {
   }
   onEdit(row){
     this.service.populateform(row);
-    this.rout.navigateByUrl('/fournisseur');
+    this.rout.navigateByUrl('/Fournisseur');
   }
 
 }

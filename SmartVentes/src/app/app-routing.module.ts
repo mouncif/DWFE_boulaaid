@@ -4,6 +4,7 @@ import { ClientComponent } from './gestionVents/client/client.component';
 import { ListClientComponent } from './gestionVents/client/list-client/list-client.component';
 import { FournisseurComponent } from './gestionVents/fournisseur/fournisseur.component';
 import { ProduitComponent } from './gestionVents/produit/produit.component';
+import { ListFournisseurComponent } from './gestionVents/fournisseur/list-fournisseur/list-fournisseur.component';
 
 
 const routes: Routes = [
@@ -11,7 +12,7 @@ const routes: Routes = [
   {path:'client', component:ClientComponent},
   {path:'list-client', component:ListClientComponent},
   {path:'Fournisseur', component:FournisseurComponent},
-  {path:'list-Fournisseur', component:ListClientComponent},
+  {path:'list-Fournisseur', component:ListFournisseurComponent},
   {path:'Produit', component:ProduitComponent},
   {path:'list-Produit', component:ListClientComponent},
 ];

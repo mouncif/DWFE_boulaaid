@@ -10,8 +10,53 @@
       "email": "amiraboulaaid@gmail.com",
       "adresseC": "test2 test1",
       "villeC": "test"
+    },
+    {
+      "id": 2,
+      "nomC": "BOULAAID",
+      "prenomC": "SAMIRA",
+      "statutC": "test",
+      "photoC": "test.png",
+      "telC": "0617018097",
+      "email": "amiraboulaaid@gmail.com",
+      "adresseC": "1010 HAY MOHAMADI",
+      "villeC": "TAZARINE"
     }
   ],
-  "Fournisseurs": [],
+  "Fournisseurs": [
+    {
+      "id": 1,
+      "nomF": "test",
+      "nomCourtF": "test",
+      "villeF": "test",
+      "AdresseF": "test",
+      "Tel_fixF": "test",
+      "Tel_mobileF": "test",
+      "FaxF": "test",
+      "emailF": "test"
+    },
+    {
+      "id": 2,
+      "nomF": "ghsagz",
+      "nomCourtF": "tgcdfty",
+      "villeF": "tfd",
+      "AdresseF": "t",
+      "Tel_fixF": "gc",
+      "Tel_mobileF": "fgt",
+      "FaxF": "ct",
+      "emailF": "cct"
+    },
+    {
+      "id": 3,
+      "nomF": "test",
+      "nomCourtF": "TEST",
+      "villeF": "TEST",
+      "AdresseF": "TEST",
+      "Tel_fixF": "098988",
+      "Tel_mobileF": "06778",
+      "FaxF": "0877",
+      "emailF": "DA@GAMIL.COM"
+    }
+  ],
   "Produits": []
 }
