@@ -58,5 +58,28 @@
       "emailF": "DA@GAMIL.COM"
     }
   ],
-  "Produits": []
+  "Produits": [
+    {
+      "id": 1,
+      "nomP": "test",
+      "nomCourtP": "test test",
+      "prix_baseP": "12",
+      "prix_venteP": "12",
+      "seuil_max_remiseP": "12",
+      "uniteP": "12",
+      "imageP": "ZZZZZZZZZZZ",
+      "quantite_initP": "12",
+      "quantite_actP": "12"
+    }
+  ],
+  "Users": [
+    {
+      "id": 1,
+      "profils": "test",
+      "dateCreate": "test",
+      "dateFin": "test",
+      "photoU": "a",
+      "email": "test1234@gmail.com"
+    }
+  ]
 }

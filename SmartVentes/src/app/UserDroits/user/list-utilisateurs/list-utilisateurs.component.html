@@ -1,0 +1,55 @@
+<mat-toolbar style ="background-color:#8B0000;" class="f">
+    <h1 style="color:aliceblue"> Liste des Utilisateurst</h1>                  
+    
+</mat-toolbar>
+<mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!-- Position Column -->
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef> Id. </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="profils">
+      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.profils}} </mat-cell>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="dateCreate">
+      <mat-header-cell *matHeaderCellDef> dateCreate </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.dateCreate}} </mat-cell>
+    </ng-container>
+  
+     <!-- Weight Column -->
+     <ng-container matColumnDef="dateFin">
+        <mat-header-cell *matHeaderCellDef> statut </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.dateFin}} </mat-cell>
+      </ng-container>
+    
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="photoU">
+        <mat-header-cell *matHeaderCellDef> Photo </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.photoU}} </mat-cell>
+      </ng-container>    
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="email">
+          <mat-header-cell *matHeaderCellDef>Email </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.email}} </mat-cell>
+        </ng-container>
+
+      
+          
+        <!-- Action Column -->
+    <ng-container matColumnDef="actions">
+      <mat-header-cell *matHeaderCellDef> ACTION </mat-header-cell>
+      <mat-cell *matCellDef="let row">
+        <button mat-icon-button (click)="onEdit(row)"><mat-icon>launch</mat-icon></button>
+        <button mat-icon-button (click)="onDelete(row.id)" color="warn">
+          <mat-icon>delete_outline</mat-icon></button>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>

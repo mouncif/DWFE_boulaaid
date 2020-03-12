@@ -44,7 +44,8 @@ export class ProduitComponent implements OnInit {
       this.update();
       this.service.form.reset();
     }
-    this.service.initializeFormGroup();
+    //this.service.initializeFormGroup();
+    this.rout.navigateByUrl('/list-Produit');
     }
 
   }

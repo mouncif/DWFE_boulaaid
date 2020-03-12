@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource, MatSnackBar } from '@angular/material';
-import { FournisseurService } from '../../services/fournisseur.service';
 import { Router } from '@angular/router';
 import { Produit } from '../../GVModeles/produit';
+import { ProduitService } from 'src/app/gestionVents/services/produit.service';
 
 @Component({
   selector: 'app-list-produit',
@@ -25,7 +25,7 @@ export class ListProduitComponent implements OnInit {
     'quantite_initP',
     'quantite_actP',
     'actions'];
-  constructor(private service: FournisseurService, private rout:Router, private notification :MatSnackBar) { }
+  constructor(private service: ProduitService, private rout:Router, private notification :MatSnackBar) { }
 
   ngOnInit() {
     this.fetchElements();
@@ -42,7 +42,7 @@ export class ListProduitComponent implements OnInit {
   }
   onDelete(id){
     if(confirm('vous etes sur ...!!!')){
-    this.service.deleteFournisseur(id)
+    this.service.deleteProduit(id)
     .subscribe(()=>{
       this.produits = this.produits.filter(produits=>produits.id!=id);
       this.notification.open("Success deleting ...");
@@ -52,7 +52,7 @@ export class ListProduitComponent implements OnInit {
   }
   onEdit(row){
     this.service.populateform(row);
-    this.rout.navigateByUrl('/fournisseur');
+    this.rout.navigateByUrl('/Produit');
   }
 
 }

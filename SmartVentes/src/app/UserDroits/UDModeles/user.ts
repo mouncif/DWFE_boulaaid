@@ -1,5 +1,5 @@
 export interface User {
-    idU : number; 
+    id : number; 
     profils : String; 
     dateCreate : String; 
     dateFin : String; 

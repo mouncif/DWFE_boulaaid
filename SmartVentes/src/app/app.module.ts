@@ -15,6 +15,8 @@ import { FournisseurComponent } from './gestionVents/fournisseur/fournisseur.com
 import { ProduitComponent } from './gestionVents/produit/produit.component';
 import { ListFournisseurComponent } from './gestionVents/fournisseur/list-fournisseur/list-fournisseur.component';
 import { ListProduitComponent } from './gestionVents/produit/list-produit/list-produit.component';
+import { LisFournisseursComponent } from './gestionVents/fournisseur/lis-fournisseurs/lis-fournisseurs.component';
+import { ListUtilisateursComponent } from './UserDroits/user/list-utilisateurs/list-utilisateurs.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { ListProduitComponent } from './gestionVents/produit/list-produit/list-p
     FournisseurComponent,
     ProduitComponent,
     ListFournisseurComponent,
-    ListProduitComponent
+    ListProduitComponent,
+    LisFournisseursComponent,
+    ListUtilisateursComponent
   ],
   imports: [
     BrowserModule,
